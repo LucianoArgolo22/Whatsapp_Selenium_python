@@ -62,11 +62,11 @@ class SeleniumBot():
 
 #%%
 if __name__ == '__main__':
-  data_dict_test = {'1155729690': ['hola', 'cómo', 'estás?'],
-                     'grupo test': ['hi', 'how', 'are', 'you?']}
+  data_dict_test = {'tel_number': ['hola', 'cómo', 'estás?'],
+                     'name_of_user or name_of_group': ['hi', 'how', 'are', 'you?']}
 
   options = webdriver.ChromeOptions()
   # Specify the path to your Chrome profile
-  options.add_argument("--user-data-dir=C:\\Usuarios\\Luciano\\AppData\\Local\\Google\\Chrome\\User Data")
+  options.add_argument("--user-data-dir=C:\\Users\\username\\AppData\\Local\\Google\\Chrome\\User Data")
   bot = SeleniumBot(options=options, data_dict=data_dict_test)
   bot.run_sending()
